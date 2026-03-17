@@ -1,0 +1,39 @@
+name: Publish to NuGet
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+          dotnet-quality: 'preview'
+
+      - name: Restore
+        run: dotnet restore InitializeNL.PgPartitionSmith.slnx
+
+      - name: Build
+        run: dotnet build InitializeNL.PgPartitionSmith.slnx -c Release --no-restore
+
+      - name: Push InitializeNL.PgPartitionSmith.Core
+        run: dotnet nuget push "InitializeNL.PgPartitionSmith.Core/bin/Release/*.nupkg" --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+
+      - name: Push InitializeNL.PgPartitionSmith.Auto
+        run: dotnet nuget push "InitializeNL.PgPartitionSmith.Auto/bin/Release/*.nupkg" --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+
+      - name: Push InitializeNL.PgPartitionSmith.Auto.Hosting
+        run: dotnet nuget push "InitializeNL.PgPartitionSmith.Auto.Hosting/bin/Release/*.nupkg" --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+
+      - name: Push InitializeNL.PgPartitionSmith.Cli
+        run: dotnet nuget push "InitializeNL.PgPartitionSmith.Cli/bin/Release/*.nupkg" --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate

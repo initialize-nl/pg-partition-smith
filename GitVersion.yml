@@ -1,0 +1,17 @@
+workflow: GitFlow/v1
+next-version: 1.0.0
+branches:
+  main:
+    regex: ^main$
+    label: ''
+    increment: Patch
+  feature:
+    regex: ^(feature|fix|refactor)[/-]
+    label: alpha
+    increment: Inherit
+  pull-request:
+    regex: ^(pull|pull-request|pr)[/-]
+    label: pr
+    increment: Inherit
+ignore:
+  sha: []

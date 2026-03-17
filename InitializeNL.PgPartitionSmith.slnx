@@ -1,0 +1,12 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU"/>
+    <Platform Name="x64"/>
+    <Platform Name="x86"/>
+  </Configurations>
+  <Project Path="InitializeNL.PgPartitionSmith.Auto.Hosting/InitializeNL.PgPartitionSmith.Auto.Hosting.csproj"/>
+  <Project Path="InitializeNL.PgPartitionSmith.Auto/InitializeNL.PgPartitionSmith.Auto.csproj"/>
+  <Project Path="InitializeNL.PgPartitionSmith.Cli/InitializeNL.PgPartitionSmith.Cli.csproj"/>
+  <Project Path="InitializeNL.PgPartitionSmith.Core/InitializeNL.PgPartitionSmith.Core.csproj"/>
+  <Project Path="InitializeNL.PgPartitionSmith.Tests/InitializeNL.PgPartitionSmith.Tests.csproj"/>
+</Solution>

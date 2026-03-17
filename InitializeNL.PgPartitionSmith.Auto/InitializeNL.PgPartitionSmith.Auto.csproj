@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <PackageId>InitializeNL.PgPartitionSmith.Auto</PackageId>
+    <Description>Runtime auto-partitioning for PostgreSQL tables. Automatically creates partitions on-demand when inserting data.</Description>
+    <PackageTags>postgresql;partitioning;auto-partition;dapper;npgsql</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\InitializeNL.PgPartitionSmith.Core\InitializeNL.PgPartitionSmith.Core.csproj"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,22 @@
+<Project>
+
+  <PropertyGroup>
+    <Authors>Frank Hommers</Authors>
+    <Company>Initialize</Company>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/initialize-nl/pg-partition-smith</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/initialize-nl/pg-partition-smith</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+
+    <!-- Package Generation -->
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GitVersion.MsBuild" Version="6.6.2" PrivateAssets="all"/>
+  </ItemGroup>
+
+</Project>
