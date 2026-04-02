@@ -9,23 +9,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.1.72"/>
-    <PackageReference Include="coverlet.collector" Version="6.0.4"/>
-    <PackageReference Include="FluentAssertions" Version="8.9.0"/>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1"/>
-    <PackageReference Include="Npgsql" Version="10.0.2"/>
-    <PackageReference Include="xunit" Version="2.9.3"/>
-    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4"/>
+    <PackageReference Include="Dapper" Version="2.1.72" />
+    <PackageReference Include="coverlet.collector" Version="6.0.4" />
+    <PackageReference Include="FluentAssertions" Version="8.9.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="Npgsql" Version="10.0.2" />
+    <PackageReference Include="Testcontainers.PostgreSql" Version="4.11.0" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
   </ItemGroup>
 
   <ItemGroup>
-    <Using Include="Xunit"/>
+    <Using Include="Xunit" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\InitializeNL.PgPartitionSmith.Core\InitializeNL.PgPartitionSmith.Core.csproj"/>
-    <ProjectReference Include="..\InitializeNL.PgPartitionSmith.Auto\InitializeNL.PgPartitionSmith.Auto.csproj"/>
-    <ProjectReference Include="..\InitializeNL.PgPartitionSmith.Auto.Hosting\InitializeNL.PgPartitionSmith.Auto.Hosting.csproj"/>
+    <ProjectReference Include="..\InitializeNL.PgPartitionSmith.Core\InitializeNL.PgPartitionSmith.Core.csproj" />
+    <ProjectReference Include="..\InitializeNL.PgPartitionSmith.Auto\InitializeNL.PgPartitionSmith.Auto.csproj" />
+    <ProjectReference Include="..\InitializeNL.PgPartitionSmith.Auto.Hosting\InitializeNL.PgPartitionSmith.Auto.Hosting.csproj" />
   </ItemGroup>
 
 </Project>
